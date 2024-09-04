@@ -1,6 +1,10 @@
 window.productData = [
-    { id: 1, name: "Product A", price: 100.00 },
-    { id: 2, name: "Product B", price: 150.00 },
-    { id: 3, name: "Product C", price: 200.00 },
-    { id: 4, name: "Product D", price: 250.00 }
+    { id: 1, name: "Smartphone", price: 24999.00 }, // INR
+    { id: 2, name: "Laptop", price: 74999.00 },   // INR
+    { id: 3, name: "Headphones", price: 2999.00 },  // INR
+    { id: 4, name: "Smartwatch", price: 12999.00 }, // INR
+    { id: 5, name: "Tablet", price: 19999.00 },     // INR
+    { id: 6, name: "Wireless Mouse", price: 899.00 },// INR
+    { id: 7, name: "Bluetooth Speaker", price: 3499.00 }, // INR
+    { id: 8, name: "External Hard Drive", price: 9999.00 } // INR
 ];
