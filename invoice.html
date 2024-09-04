@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylized Invoice with Discounts</title>
+    <link rel="stylesheet" href="styles/invoice.css" />
+    
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="circles">
+                <div class="circle blue"></div>
+                <div class="circle purple"></div>
+                <div class="circle green"></div>
+            </div>
+            <h1>INVOICE</h1>
+        </div>
+
+        <!-- Invoice Details -->
+        <div class="invoice-details">
+            <div>
+                <p class="label">INVOICE TO :</p>
+                <p id="invoiceTo" class="invoice-to">Customer Name</p> <!-- Updated for dynamic customer name -->
+                <p id="contactNumber">Contact Number</p> <!-- Added this line -->
+            </div>
+            <div class="text-right">
+                <p id="date">Date : </p> <!-- Updated for dynamic date -->
+                <p id="invoiceNo">Invoice No : </p> <!-- Updated for dynamic invoice number -->
+                <p class="total-due-label">TOTAL DUE :</p>
+                <p id="totalDue" class="total-due">INR: </p> <!-- Changed from USD to INR -->
+            </div>
+        </div>
+
+        <!-- Item Table -->
+        <div class="item-table-container">
+            <table class="item-table">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th class="text-right">Qty</th>
+                        <th class="text-right">Price</th>
+                        <th class="text-right">Discount</th>
+                        <th class="text-right">Price After Discount</th>
+                        <th class="text-right">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="invoiceItems">
+                    <!-- Items will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Totals and Payment Method -->
+        <div class="totals-and-payment">
+            <div>
+                <h3>Payment Method</h3>
+                <p>UPI ID : brandedpatil@ybl</p>
+            </div>
+            <div class="text-right">
+                <p id="subtotal">Sub-total : </p> <!-- Updated for dynamic subtotal -->
+                <p id="cgst">CGST (9%) : </p> <!-- Placeholder for dynamic CGST -->
+                <p id="sgst">SGST (9%) : </p> <!-- Placeholder for dynamic SGST -->
+                <div class="total">
+                    <span>Total : </span>
+                    <span id="totalDueFinal"></span> <!-- Placeholder for dynamic final total -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Terms, Signature, and Company Info -->
+        <div class="terms-and-signature">
+            <h3>Terms and Conditions</h3>
+            <p>Please send payment within 30 days of receiving this invoice. There will be 10% interest charge per month on late invoice.</p>
+            <div class="text-right">
+                <p>Anil Manal</p>
+                <p>Administrator</p>
+            </div>
+        </div>
+
+        <div class="company-info">
+            <h3>Company Information</h3>
+            <p>Company Name: Branded Patil Ltd.</p>
+            <p>Address: 210 Vascon GoldLife, Talegaon, MH, 56789</p>
+            <p>Contact: +91-9359303097</p>
+            <p>Email: contact@brandedpatil.in</p>
+        </div>
+
+        <!-- Download and Print Buttons -->
+        <div class="buttons">
+            <button id="downloadBtn" class="btn">Download Invoice</button>
+            <button id="printBtn" class="btn">Print Invoice</button>
+        </div>
+    </div>
+
+    <!-- Include html2canvas and jsPDF libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.esm.min.js" integrity="sha512-OxXHRCrHZMOqbrhaUX+wMD4pRxO+Ym5CKOf0qsPkBTeBOXBjAKirtaTH87wKgEikZBPOMQPOEqE/3fpWa1wiuQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.js" integrity="sha512-sn/GHTj+FCxK5wam7k9w4gPPm6zss4Zwl/X9wgrvGMFbnedR8lTUSLdsolDRBRzsX6N+YgG6OWyvn9qaFVXH9w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="./scripts/invoice.js"></script>
+</body>
+</html>

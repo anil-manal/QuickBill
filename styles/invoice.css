@@ -1,0 +1,276 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(to right, #1e3a8a, #7e22ce);
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circles {
+    display: flex;
+}
+
+.circle {
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.blue {
+    background-color: #60a5fa;
+}
+
+.purple {
+    background-color: #c084fc;
+}
+
+.green {
+    background-color: #4ade80;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.invoice-details, .totals-and-payment {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.invoice-to {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.total-due-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.total-due {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+.item-table-container {
+    padding: 0 20px 20px;
+    overflow-x: auto;
+}
+
+.item-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.item-table th, .item-table td {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.item-table th {
+    background: linear-gradient(to right, #1e3a8a, #7e22ce);
+    color: white;
+}
+
+.item-table tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.item-table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.total {
+    margin-top: 10px;
+    padding: 10px;
+    background: linear-gradient(to right, #1e3a8a, #7e22ce);
+    color: white;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.terms-and-signature {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.terms-and-signature h3 {
+    font-weight: bold;
+}
+
+.terms-and-signature p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.buttons {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1e3a8a;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #7e22ce;
+}
+
+.company-info {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.company-info h3 {
+    font-weight: bold;
+}
+
+.company-info p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: white;
+    }
+
+    .container {
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        width: 100%;
+        page-break-inside: avoid;
+    }
+
+    .header {
+        background: linear-gradient(to right, #1e3a8a, #7e22ce);
+        color: white;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .circles {
+        display: flex;
+    }
+
+    .circle {
+        width: 8px;
+        height: 8px;
+        margin-right: 5px;
+        border-radius: 50%;
+        opacity: 0.5;
+    }
+
+    .blue {
+        background-color: #60a5fa;
+    }
+
+    .purple {
+        background-color: #c084fc;
+    }
+
+    .green {
+        background-color: #4ade80;
+    }
+
+    .header h1 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .invoice-details, .totals-and-payment {
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .item-table-container {
+        padding: 0;
+        overflow: visible;
+    }
+
+    .item-table {
+        border-collapse: collapse;
+    }
+
+    .item-table th, .item-table td {
+        padding: 8px;
+        border: 1px solid #ddd;
+    }
+
+    .item-table th {
+        background: linear-gradient(to right, #1e3a8a, #7e22ce);
+        color: white;
+    }
+
+    .total {
+        margin-top: 10px;
+        padding: 10px;
+        background: linear-gradient(to right, #1e3a8a, #7e22ce);
+        color: white;
+        display: inline-block;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .buttons {
+        display: none;
+    }
+
+    .company-info {
+        border-top: none;
+        margin-top: 0;
+    }
+}
